@@ -3209,6 +3209,8 @@ static int vorbis_decode_initial(vorb *f, int *p_left_start, int *p_left_end, in
 
 static int vorbis_decode_packet_rest(vorb *f, int *len, Mode *m, int left_start, int left_end, int right_start, int right_end, int *p_left)
 {
+   (void)left_end;
+
    Mapping *map;
    int i,j,k,n,n2;
    int zero_channel[256];
