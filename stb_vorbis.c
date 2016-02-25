@@ -3119,6 +3119,8 @@ typedef int YTYPE;
 #endif
 static int do_floor(vorb *f, Mapping *map, int i, int n, float *target, YTYPE *finalY, uint8 *step2_flag)
 {
+   (void)step2_flag;
+
    int n2 = n >> 1;
    int s = map->chan[i].mux, floor;
    floor = map->submap_floor[s];
